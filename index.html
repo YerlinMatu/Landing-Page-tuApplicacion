@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Prueba tu Applicación </title>
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css'>
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <main>
+<nav>
+  <a href="#" class="brand-logo center">Landing</a>
+</nav>
+<div class="formbox animated bounceInUp">
+  <img :src="logo" class="animated bounce"> 
+  <form onsubmit="return false">
+    <input type="text" v-model="form.nombre" placeholder="Nombre" required>
+    <input type="text" v-model="form.apellidos" placeholder="Apellidos" required>
+    <input type="number" v-model="form.telefono" placeholder="Teléfono" required>
+    <input type="email" v-model="form.email" placeholder="Email" required>
+    <input type="text" v-model="form.direccion" placeholder="Dirección" required>
+  <select class="browser-default" id="preferencias">
+    <option disabled selected>Preferencias</option>
+    <option :value="item"  v-for="item in preference">{{ item }}</option> 
+  </select>
+    <button class="btn" onclick="Registrar()"><i class="material-icons">check_box</i>Registrar<span></span></button>
+  </form>
+</div>
+</main>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.17.1/axios.min.js'></script>
+
+    <script  src="js/index.js"></script>
+
+</body>
+</html>
